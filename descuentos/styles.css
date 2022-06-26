@@ -1,0 +1,439 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Signika+Negative:wght@300;400;500;600;700&family=Syncopate:wght@400;700&display=swap");
+
+* {
+  font-family: montserrat;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body,
+html {
+  height: 100vh;
+  width: 100%;
+ 
+  background: linear-gradient(to bottom, #eef2f3, #c3cfd9);
+  
+}
+
+main {
+  width: 100%;
+  height: calc(100vh - 80px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.fa-arrow-left {
+
+  font-size: 50px;
+  cursor: pointer;
+}
+
+.fa-arrow-left:hover {
+
+ color: rgb(43, 100, 164);
+}
+
+/* HEADER */
+
+
+
+
+header {
+  color: white;
+  padding: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.919);
+  min-width: 340px;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  min-width: 340px;
+  
+}
+li {
+  position: relative;
+  cursor: pointer;
+}
+
+li:hover {
+  text-shadow: 1px 1px 2px white;
+}
+
+li:hover:after {
+  content: "";
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 25px;
+  height: 2px;
+  background-color: white;
+  width: 100%;
+  animation-name: hover;
+  animation-duration: 0.7s;
+  animation-iteration-count: 1;
+}
+
+header input,label {
+
+  display: none;
+}
+
+@keyframes hover {
+  0% {
+    width: 10px;
+  }
+
+  100% {
+    width: 100%;
+  }
+}
+
+/* HEADER */
+
+/* SECCION UNO*/
+
+.seccion-uno {
+  height: auto;
+  width: 100%;
+  background-color: rgba(128, 128, 128, 0.364);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+
+  padding: 30px 50px;
+
+  min-width: 340px;
+
+  z-index: 5;
+  position: absolute;
+  gap: 20px;
+}
+
+.seccion-uno img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.4;
+
+  z-index: 1;
+}
+
+.div1 {
+  padding-bottom: 40px;
+  max-width: 600px;
+  flex-grow: 1;
+  flex-shrink: 1;
+  min-width: 340px;
+}
+.caja-texto {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+
+  padding: 20px;
+}
+
+.caja-texto p {
+  font-size: clamp(16px, 4vw, 24px);
+}
+
+h1 {
+  font-family: syncopate;
+  font-size: clamp(40px, 8vw, 60px);
+}
+
+.caja-pelota-texto {
+  display: flex;
+  padding: 0 20px;
+  gap: 60px;
+  z-index: 5;
+  
+}
+
+.caja-promo {
+  background-color: rgb(221 243 255 / 54%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+  border: 14px solid white;
+  border-radius: 30px;
+  box-shadow: 0 0 8px rgb(69, 69, 69);
+  z-index: 5;
+  padding: 20px;
+  min-width: 320px;
+}
+
+/* .caja-promo:after {
+
+        content:"HOT SALE";
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 20px;
+        width: 100px;
+        color: white;
+        position: relative;
+        padding: 10px;
+        font-weight: bold;
+        
+        left: -50%;
+        z-index: 10;
+        transform: rotate(-45deg);
+        background-color: red;
+      } */
+
+.caja-promo h2 {
+  text-align: center;
+}
+
+.caja-promo button {
+  height: 45px;
+  width: 150px;
+  border-radius: 20px;
+  border-style: none;
+  box-shadow: 0px 0px 5px black;
+  font-weight: bold;
+}
+.caja-promo button:hover {
+  cursor: pointer;
+  background-color: rgb(224, 224, 224);
+}
+
+.caja-promo span {
+  font-size: 80px;
+  font-weight: bold;
+  text-shadow: 0px 5px 5px #a8a8a8;
+  color: white;
+}
+
+/* PELOTA */
+
+.caja-pelota {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  height: auto;
+  width: 100px;
+}
+.bouncingball {
+  width: 90px;
+  height: 90px;
+  border-radius: 100%;
+  background: #ccc;
+  animation: bounce 1s;
+  transform: translateY(0px);
+  animation-iteration-count: 2;
+  position: absolute;
+  top: 40px;
+  border: 3px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: syncopate;
+  font-size: 40px;
+  font-weight: bold;
+}
+
+@keyframes bounce {
+  0% {
+    top: 40px;
+    -webkit-animation-timing-function: ease-in;
+  }
+  40% {
+  }
+  50% {
+    top: 180px;
+    height: 140px;
+    -webkit-animation-timing-function: ease-out;
+  }
+  55% {
+    top: 180px;
+    height: 120px;
+    -webkit-animation-timing-function: ease-in;
+  }
+  65% {
+    top: 160px;
+    height: 140px;
+    -webkit-animation-timing-function: ease-out;
+  }
+  95% {
+    top: 40px;
+    -webkit-animation-timing-function: ease-in;
+  }
+  100% {
+    top: 40px;
+    -webkit-animation-timing-function: ease-in;
+  }
+}
+
+/* PELOTA */
+
+@media screen and (max-width: 600px) {
+  .bouncingball {
+    width: 75px;
+    height: 75px;
+    font-size: 30px;
+  }
+
+  .caja-pelota {
+    width: 75px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .bouncingball {
+    top: 60px;
+  }
+  @keyframes bounce {
+    0% {
+      top: 60px;
+      -webkit-animation-timing-function: ease-in;
+    }
+    40% {
+    }
+    50% {
+      top: 200px;
+      height: 140px;
+      -webkit-animation-timing-function: ease-out;
+    }
+    55% {
+      top: 200px;
+      height: 120px;
+      -webkit-animation-timing-function: ease-in;
+    }
+    65% {
+      top: 180px;
+      height: 140px;
+      -webkit-animation-timing-function: ease-out;
+    }
+    95% {
+      top: 60px;
+      -webkit-animation-timing-function: ease-in;
+    }
+    100% {
+      top: 60px;
+      -webkit-animation-timing-function: ease-in;
+    }
+  }
+}
+/* PELOTA */
+
+
+/* HEADER */
+
+
+@media screen and (max-width: 605px) {
+
+
+
+  .ul-head {
+    
+    pointer-events: none;
+    font-size: 1px;
+    opacity: 0;
+    padding: unset;
+    gap: unset;
+    width: 1px;
+    height: 1px;
+    position: absolute;
+    top: 0;
+    right: 10px;
+}
+
+
+.mhamburguesa {
+
+  display: block;
+  font-size: 25px;
+  position: absolute;
+  top: 25px;
+  right: 30px;
+  cursor: pointer;
+  max-width: 200px;
+  }
+
+input:checked ~ ul {
+  pointer-events: unset;
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  text-align: center;
+  background-color: rgb(76, 76, 76);
+  width: 60vw;
+ 
+  position: absolute;
+  top: 80px;
+  right: 0;
+  font-size: 20px;
+  transition: all 0.8s ease;
+  opacity: 1;
+  
+  z-index: 50;
+  
+  border: 3px solid white;
+  gap: unset;
+}
+
+.ul-head li {
+  border: 1px solid white;
+  width: 100%;
+  padding: 20px;
+  z-index: 50;
+  opacity: 1;
+  
+}
+
+li:hover:after {
+ display: none;
+}
+
+li:hover {
+
+  background-color: grey;
+}
+}
+
+/* HEADER */
+
+
+
+.div-sorpresa {
+  width: 400px;
+  height: 400px;
+}
+
+
+a {
+
+  color: unset;
+  text-decoration: unset;
+}
+
+
+.div-sorpresa {
+
+  height: 300px;
+  width: 300px;
+  background-image: url(hutz.jpg);
+  background-repeat: no-repeat;
+}
